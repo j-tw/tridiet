@@ -14,21 +14,17 @@ import { MonoText } from '../components/StyledText';
 
 export default function HomeScreen() {
   return (
-    <View>
-
 
       <View style={styles.tabBarInfoContainer}>
         <Text style={styles.tabBarInfoText}>
-          This is a tab bar. You can edit it in:
+
         </Text>
 
         <View
           style={[styles.codeHighlightContainer, styles.navigationFilename]}>
           <MonoText style={styles.codeHighlightText}>
-            navigation/MainTabNavigator.js
           </MonoText>
         </View>
-      </View>
       </View>
   );
 }
@@ -39,10 +35,10 @@ HomeScreen.navigationOptions = {
 
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-  },
+  // container: {
+  //   flex: 1,
+  //   backgroundColor: '#fff',
+  // },
 
   tabBarInfoContainer: {
     position: 'absolute',
@@ -63,4 +59,5 @@ const styles = StyleSheet.create({
     color: 'rgba(96,100,109, 1)',
     textAlign: 'center',
   },
+
 })

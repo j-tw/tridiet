@@ -28,6 +28,7 @@ export default function App(props) {
   }
 }
 
+
 async function loadResourcesAsync() {
   await Promise.all([
     Asset.loadAsync([
