@@ -14,6 +14,25 @@ const config = Platform.select({
   default: {},
 });
 
+const LogStack = createStackNavigator(
+  {
+  Login: LogInScreen,
+  },
+  config
+);
+
+LogStack.navigationOptions = {
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={
+        Platform.OS === 'ios'
+          ? `ios-information-circle${focused ? '' : '-outline'}`
+          : 'md-information-circle'
+      }
+    />
+  ),
+};
 
 
 const HomeStack = createStackNavigator(

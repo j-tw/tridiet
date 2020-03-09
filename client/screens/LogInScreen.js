@@ -8,6 +8,8 @@ import {
   Text,
   TouchableOpacity,
   View,
+  Keyboard,
+  TouchableHighlight,
 } from 'react-native';
 
 
@@ -24,9 +26,17 @@ export default function LogInScreen() {
             a better way to track your health
           </Text>
 
+          <TouchableHighlight
+          onPress={() => {
+            Keyboard.dismiss();
+            navigation.navigate('HomeScreen');
+          }}
+          underlayColor="white"
+        >
           <View style={styles.button}>
             <Text style={styles.buttonText}>Log In</Text>
           </View>
+        </TouchableHighlight>
         </View>
 
     );
